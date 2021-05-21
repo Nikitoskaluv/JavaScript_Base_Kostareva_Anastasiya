@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 5</title>
+</head>
+
+<body>
+    <h1>Задание №5</h1>
+    <script>
+        "use strict"
+        function summNums(a, b) {
+            return alert(a + b);
+        }
+
+        function subtrNums(c, d) {
+            return alert(c - d);
+        }
+        function divNums(f, g) {
+            return alert(f / g);
+        }
+        function multNums(h, i) {
+            return alert(h * i);
+        }
+        let firstNumber = +prompt("Введите первое число", "");
+        let secondNumber = +prompt("Введите второе число", "");
+        let toDo = prompt("Укажите операцию, которую необходимо выполнить:сложение, вычитание, деление, умножение", "");
+        toDo = toDo.toLocaleLowerCase();
+
+
+        function mathOperation(arg1, arg2, operation) {
+            switch (operation) {
+                case "сложение":
+                    return summNums(arg1, arg2);
+                case "вычитание":
+                    return subtrNums(arg1, arg2);
+                case "деление":
+                    return divNums(arg1, arg2);
+                case "умножение":
+                    return multNums(arg1, arg2);
+                default:
+                    alert("Неизвестная операция");
+                    break;
+            }
+        }
+        mathOperation(firstNumber, secondNumber, toDo);
+    </script>
+
+</body>
+
+</html>
