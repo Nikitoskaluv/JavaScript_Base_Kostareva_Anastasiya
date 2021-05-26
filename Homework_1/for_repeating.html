@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // function showDay() {
+        //     let dayNum = new Date().getDay();
+        //     let day = "";
+        //     switch (dayNum) {
+        //         case 1:
+        //             day = "Monday";
+        //             break;
+        //         case 2:
+        //             day = "Tuesday";
+        //             break;
+        //         case 3:
+        //             day = "Wednesday";
+        //             break;
+        //         case 4:
+        //             day = "Thursday"
+        //             break;
+        //         case 5:
+        //             day = "Friday"
+        //             break;
+        //         case 6:
+        //             day = "Saturday"
+        //             break;
+        //         case 0:
+        //             day = "Sunday"
+        //             break;
+        //         default:
+        //             day = false;
+        //     }
+        //     alert(day);
+        // }
+        // showDay();
+
+
+        // function roundToHundredths(number) {
+        //     return parseInt(number * 100) / 100;
+        // }
+
+        // function convertCurrency(rubles, currency) {
+        //     let currencyCost = 0;
+        //     switch (currency) {
+        //         case "dollars":
+        //             currencyCost = 66;
+        //             break;
+        //         case "euro":
+        //             currencyCost = 75;
+        //             break;
+        //         default:
+        //             throw new Error("Не верная валюта:" + currency);
+        //     }
+        //     let result = roundToHundredths(rubles / currencyCost);
+        //     return result;
+        // }
+        // let inEuro = convertCurrency(100, "euro");
+        // console.log(
+        //     "Ваша сумма в долларах: " + inEuro
+        // );
+
+
+
+        // function getSquare(num) {
+        //     if (num === "") {
+        //         throw new Error("Вы ничего не ввели");
+        //     }
+        //     if (num === null) {
+        //         throw new Error("Вы нажали отмену");
+        //     }
+        //     num = Number(num);
+        //     if (isNaN(num)) {
+        //         throw new Error("Вы ввели не число");
+        //     }
+        //     return num * num;
+        // }
+
+        // let myNum = prompt("Введите число", "");
+        // let result = getSquare(myNum);
+        // if (result !== undefined) {
+        //     alert(result);
+        // }
+
+
+        let riddle = parseInt(Math.random() * 100);
+        function guesNumber(num) {
+            let answer = parseInt(prompt("Угадайте число", ""));
+            if (answer > num) {
+                alert("Вы загадали слишком большое число");
+            } else if (answer < num) {
+                alert("Вы загадали слишком маленькое число");
+            } else if (answer == num) {
+                alert("Вы угадали");
+                return;
+            } else {
+                alert("Необходимо ввести число");
+            }
+            guesNumber(num);
+        }
+        guesNumber(riddle);
+
+    </script>
+</body>
+
+</html>
