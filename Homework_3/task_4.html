@@ -40,8 +40,8 @@
         ];
         // Задача 1
 
-        let result = products.filter(function getPhotos(item, i, products) {
-            return products[i].photos !== undefined && products[i].photos.length > 0;
+        let result = products.filter(function (product) {
+            return product.photos !== undefined && product.photos.length > 0;
         });
         console.log(result);
 
@@ -50,10 +50,15 @@
         // Задача 2
 
         products.sort(function (a, b) {
-            if (a.price > b.price)
+            if (a.price > b.price) {
                 return 1;
-            if (a.price < b.price)
+            }
+            if (a.price < b.price) {
                 return -1;
+            }
+            if (a.price = b.price) {
+                return 0;
+            }
         })
         console.log(products);
 

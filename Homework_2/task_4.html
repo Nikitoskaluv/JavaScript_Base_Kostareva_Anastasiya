@@ -12,13 +12,14 @@
     <h1>Задание №4</h1>
     <script>
         "use strict"
+
+        let a = +prompt("Введите первое число", "");
+        let b = +prompt("Введите второе число", "");
         /**
          * Функция для сложения 
          * @param {number} a первое число
          * @param {number} b второе число
          * @return {number}*/
-        let a = +prompt("Введите первое число", "");
-        let b = +prompt("Введите второе число", "");
         function summNums(a, b) {
             return a + b;
         }
@@ -27,39 +28,42 @@
         alert("Сумма чисел: " + summResult);
 
 
-        /**
-         * Функция для вычитания
-         * @param {number} a первое число
-         * @param {number} b второе число
-         * @return {number}*/
+
         let c = +prompt("Введите первое число", "");
         let d = +prompt("Введите второе число", "");
+        /**
+         * Функция для вычитания
+         * @param {number} c первое число
+         * @param {number} d второе число
+         * @return {number}*/
         function subtrNums(c, d) {
             return c - d;
         }
         let subtrResult = subtrNums(c, d);
         alert("Разность чисел: " + subtrResult);
 
-        /**
-         * Функция для деления
-         * @param {number} a первое число
-         * @param {number} b второе число
-         * @return {number}*/
+
         let f = +prompt("Введите первое число", "");
         let g = +prompt("Введите второе число", "");
+        /**
+         * Функция для деления
+         * @param {number} f первое число
+         * @param {number} g второе число
+         * @return {number}*/
         function divNums(f, g) {
             return f / g;
         }
         let divResult = divNums(f, g);
         alert("Частное: " + divResult);
 
-        /**
-         * Функция для умножения 
-         * @param {number} a первое число
-         * @param {number} b второе число
-         * @return {number}*/
+
         let h = +prompt("Введите первое число", "");
         let i = +prompt("Введите второе число", "");
+        /**
+        * Функция для умножения 
+        * @param {number} h первое число
+        * @param {number} i второе число
+        * @return {number}*/
         function multNums(h, i) {
             return h * i;
         }
