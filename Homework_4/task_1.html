@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 1</title>
+</head>
+
+<body>
+    <h1>Задание №1</h1>
+    <script>
+        "use strict"
+
+        function checkString(answer) {
+            if (answer == "") {
+                console.log("Вы не ввели число");
+                return {};
+            } else {
+                answer = Number(answer);
+                return checkNumber(answer);
+            }
+        }
+        let numbersObject = {};
+        function checkNumber(num) {
+            if (Number.isInteger(num)) {
+                if (num >= 0 && num <= 999) {
+                    console.log("Введенное число подходит");
+                    numbersObject = {
+                        units: num % 10,
+                        tens: Math.floor(num / 10) % 10,
+                        hundreds: Math.floor(num / 100),
+                    }
+                    console.log(numbersObject);
+                    return num;
+                } else {
+                    console.log("Введенное число не подходит");
+                    return {};
+                }
+            }
+            else {
+                console.log("Введенное число не удовлетворяет условию");
+                return {};
+            }
+        }
+
+
+        let number = prompt("Введите целое число от 0 до 999", "");
+        let res = checkString(number);
+       
+    </script>
+
+</body>
+
+</html>
