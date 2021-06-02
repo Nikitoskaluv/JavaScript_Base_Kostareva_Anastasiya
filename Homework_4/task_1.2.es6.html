@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task_1.2_ES6</title>
+</head>
+
+<body>
+    <h1>Задание №1.2 ES6</h1>
+    <script>
+        "use strict"
+        class Post {
+            constructor(author, text, date) {
+                this.author = author;
+                this.text = text;
+                this.date = date;
+            }
+            edit(textGot) {
+                textGot = prompt("Ваш комментарий", "");
+                this.text = textGot;
+                console.log(this.text);
+            }
+        }
+
+        class AttachedPost extends Post {
+            constructor(author, text, date, highlighted) {
+                super(author, name, date);
+                this.highlighted = false;
+            }
+            makeTextHighlighted() {
+                this.highlighted = true;
+            }
+        }
+
+        let post1 = new Post("Mike", this.text, "31.03.2021");
+        post1.edit();
+        console.log(post1);
+
+        let post2 = new AttachedPost("Lily", this.text, "31.05.2021", this.highlighted)
+        post2.edit();
+        post2.makeTextHighlighted();
+        console.log(post2);
+    </script>
+
+</body>
+
+</html>
