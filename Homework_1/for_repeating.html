@@ -90,23 +90,30 @@
         // }
 
 
-        let riddle = parseInt(Math.random() * 100);
-        function guesNumber(num) {
-            let answer = parseInt(prompt("Угадайте число", ""));
-            if (answer > num) {
-                alert("Вы загадали слишком большое число");
-            } else if (answer < num) {
-                alert("Вы загадали слишком маленькое число");
-            } else if (answer == num) {
-                alert("Вы угадали");
-                return;
-            } else {
-                alert("Необходимо ввести число");
-            }
-            guesNumber(num);
-        }
-        guesNumber(riddle);
+        // let riddle = parseInt(Math.random() * 100);
+        // function guesNumber(num) {
+        //     let answer = parseInt(prompt("Угадайте число", ""));
+        //     if (answer > num) {
+        //         alert("Вы загадали слишком большое число");
+        //     } else if (answer < num) {
+        //         alert("Вы загадали слишком маленькое число");
+        //     } else if (answer == num) {
+        //         alert("Вы угадали");
+        //         return;
+        //     } else {
+        //         alert("Необходимо ввести число");
+        //     }
+        //     guesNumber(num);
+        // }
+        // guesNumber(riddle);
 
+
+
+        let result = 1;
+        for (let i = 2; i <= 4; i++) {
+            result *= i;
+        }
+        console.log(result);
     </script>
 </body>
 
