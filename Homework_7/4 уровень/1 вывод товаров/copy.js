@@ -1,11 +1,5 @@
 "use strict";
 
-/* <div class="product">
-    <div>${}</div>
-    <img src="${} " alt=""><br>
-            <div>${}</div >
-            <a href="https://example.com/producs/${}">Подробнее</a>
-   </div > */
 
 const products = {
     phones: [
@@ -73,7 +67,13 @@ const products = {
 };
 
 
+let buttonCollection = document.querySelectorAll('button');
+let productPart = document.querySelector('.products');
 
+
+buttonCollection.forEach(function (button) {
+    button.addEventListener('click', clickHandler);
+});
 
 /**
  * Эта функция должна вызываться при клике по кнопкам.
@@ -82,7 +82,8 @@ const products = {
 
 
 function clickHandler(event) {
-
+    productPart.innerHTML = "";
+    showCategory(event.target.dataset.type);
 }
 
 //вам нужно очищать содержимое .products
@@ -103,7 +104,12 @@ function clickHandler(event) {
 
 function showCategory(category) {
 
-
+    let categoryProducts = products[category];
+    let productsDiv = "";
+    categoryProducts.forEach(function (product) {
+        productsDiv += getProductMarkup(product);
+    });
+    productPart.insertAdjacentHTML('afterbegin', productsDiv);
 }
 
 
@@ -119,5 +125,13 @@ function showCategory(category) {
 
 
 function getProductMarkup(product) {
-
+    return `
+   <div class="product">
+   <div>${product.name}</div>
+   <img src="${product.imageUrl
+        } " alt=""><br>
+   <div>${product.price}</div >
+       <a href="https://example.com/producs/${product.id}">Подробнее</a>
+   </div >
+   `;
 }
